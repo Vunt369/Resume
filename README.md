@@ -1,4 +1,4 @@
-# Chris Nzoka-okoye Digital Resume
+# Nguyen Tuan Vu Resume
 
 ---
 
