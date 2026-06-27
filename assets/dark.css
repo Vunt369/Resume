@@ -1,0 +1,428 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap");
+
+:root {
+  /* color code */
+  --PriColor: #e5fbfb;
+  --SecColor: #1d3557;
+  --LinkColor: #0974b6;
+  --hoverLinkColor: #e63946;
+
+  /* for dark mode colors, interchange --textColor value with that of --bgColor */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Ubuntu, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  background-color: var(--SecColor);
+  color: var(--PriColor);
+}
+
+/* Global Rules */
+.container {
+  width: 70%;
+  margin: auto;
+  overflow: hidden;
+}
+
+section {
+  margin: 30px 0;
+}
+
+button {
+  height: 30px;
+  border: none;
+  border-radius: 2rem;
+  padding: 0 15px 0 15px;
+  margin-top: 20px;
+  background-color: var(--LinkColor);
+  color: var(--SecColor);
+  cursor: pointer;
+}
+
+.line-break {
+  border-top: 1px var(--PriColor) dashed;
+  margin: 10px 0;
+}
+
+button:hover {
+  background-color: var(--PriColor);
+  font-weight: bold;
+}
+
+button:active {
+  background-color: var(--hoverLinkColor);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+.card {
+  border-left: 1px solid var(--PriColor);
+  margin-top: 3em;
+  margin-bottom: 3em;
+  padding-left: 2em;
+}
+
+a {
+  color: var(--LinkColor);
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+a:active {
+  color: var(--hoverLinkColor);
+}
+
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 0.4em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--SecColor);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--PriColor);
+  border-radius: 0.56em;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--LinkColor);
+}
+
+/* Header */
+header {
+  background-color: var(--SecColor);
+  color: var(--PriColor);
+  border-bottom: 0.22em var(--PriColor) solid;
+  min-height: max-content;
+  max-height: 3.35em;
+  position: sticky;
+  top: 0;
+}
+
+#branding {
+  float: left;
+  margin-top: -1.27em;
+}
+
+nav {
+  float: right;
+  margin-top: 0.834em;
+}
+
+nav ul li {
+  display: inline;
+  padding: 0 1.12em;
+}
+
+nav li a {
+  font-size: 1.05em;
+  color: var(--PriColor);
+}
+
+/* bio */
+#bio-img img {
+  border-radius: 50%;
+  margin: 1.12em 1.38em 0 0;
+  width: 16.68em;
+  height: 16.68em;
+  object-fit: cover;
+  float: left;
+}
+
+#bio-details {
+  margin-top: 3em;
+}
+
+#bio-details p {
+  text-align: justify;
+}
+
+#profile-name {
+  font-size: 1.8em;
+}
+
+#contact p a {
+  padding-right: 25px;
+}
+
+#contact a img {
+  max-width: 30px;
+  max-height: 30px;
+  margin: 0 3px;
+}
+
+/* Skills */
+#skills div p {
+  border: 1px var(--PriColor) solid;
+  border-radius: 6px;
+  padding: 5px 5px;
+  max-width: max-content;
+}
+
+/* work History */
+#work h3 {
+  margin-bottom: 0;
+}
+#work p {
+  margin-top: 0;
+}
+
+/* projects */
+.dark {
+  background: var(--PriColor);
+  color: var(--SecColor);
+  padding: 15px;
+  text-align: justify;
+}
+
+.dark div .line-break {
+  border-top: 1px var(--SecColor) dashed;
+}
+
+#project div p {
+  border-bottom: 1px var(--SecColor) solid;
+  border-radius: 50px;
+  padding: 5px 5px;
+  /* max-width: max-content; */
+}
+
+/* Education */
+.sch-cert {
+  margin: 0;
+  padding: 0;
+}
+
+/* footer */
+footer {
+  background-color: var(--PriColor);
+  color: var(--SecColor);
+  text-align: center;
+  margin-top: 10px;
+  position: sticky;
+  bottom: 0;
+}
+
+/* moblie phone media querry */
+@media (max-width: 500px) {
+  .container {
+    font-size: 16px;
+    width: 90%;
+    /* margin: unset; */
+    /* overflow: unset; */
+  }
+
+  section {
+    margin: 20px 0;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  /* Header */
+  #branding {
+    float: left;
+    margin-top: -1.27em;
+  }
+
+  #branding h1 {
+    font-size: 1.5em;
+    padding-top: 0.5em;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  nav ul li {
+    padding: 0 0.5em;
+  }
+
+  /* bio */
+  #bio .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #bio-img img {
+    margin: 0 0 0 0;
+    width: 10em;
+    height: 10em;
+    float: unset;
+  }
+
+  #profile-name {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  #bio-details {
+    margin-top: unset;
+  }
+
+  #bio-details p {
+    text-align: center;
+  }
+
+  #contact p a {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #bio-details a {
+    display: flex;
+    justify-content: center;
+  }
+
+  #social a {
+    padding: 0.2em;
+  }
+
+  /* project */
+  #project div p {
+    border-radius: 10px;
+  }
+}
+
+/* tablet mdia querry */
+@media (min-width: 501px) and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  /* Header */
+  header {
+    min-height: max-content;
+    max-height: 3.35em;
+  }
+
+  #branding {
+    float: left;
+    margin-top: -0.8em;
+    font-size: 0.8em;
+  }
+
+  nav:target {
+    display: block;
+  }
+
+  nav {
+    float: right;
+  }
+
+  nav ul li {
+    padding: 0 0 0 1.12em;
+  }
+
+  /* bio */
+  #bio-img img {
+    margin: 0 1.38em 0 0;
+    width: 11.68em;
+    height: 11.68em;
+  }
+
+  #bio-details {
+    margin-top: -1em;
+  }
+
+  #profile-name {
+    font-size: 1.5em;
+  }
+
+  #contact p a {
+    padding-right: 19px;
+  }
+
+  #social {
+    margin: 0 0 0 235px;
+  }
+
+  #bio-details a button {
+    margin: 0 0 0 235px;
+  }
+
+  #contact a img {
+    max-width: 30px;
+    max-height: 30px;
+    margin: 0 3px;
+  }
+}
+
+/* small screen laptop media querry */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* header */
+  .container {
+    width: 80%;
+  }
+
+  #branding {
+    font-size: 0.8em;
+    margin-top: -1em;
+  }
+
+  nav {
+    float: right;
+    margin-top: 0.834em;
+  }
+
+  /* bio */
+  #bio-img img {
+    margin: 1.12em 1.38em 0 0;
+    width: 12.68em;
+    height: 12.68em;
+  }
+
+  #bio-details {
+    margin-top: 1em;
+  }
+
+  #profile-name {
+    font-size: 1.57em;
+  }
+
+  #contact p a {
+    padding-right: 23px;
+  }
+
+  #social {
+    margin: 0 0 0 250px;
+  }
+
+  #bio-details a button {
+    margin: 0 0 0 250px;
+  }
+
+  #contact a img {
+    max-width: 30px;
+    max-height: 30px;
+    margin: 5px 3px;
+  }
+}
